@@ -1,66 +1,325 @@
-Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 4/17/2014 10:27:50 PM
+Cmp-Mod V01 Created by Cvpcb 0.201501052116+5352~20~ubuntu14.04.1-product   date = Tue 20 Jan 2015 10:19:29 PM CST
 
 BeginCmp
 TimeStamp = /534A2AC4;
 Reference = C1;
 ValeurCmp = 0.1u;
-IdModule  = SM0805;
+IdModule  = Capacitors_SMD:C_0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /5350DC5E;
+TimeStamp = /54B98EB4;
+Reference = C2;
+ValeurCmp = CP2;
+IdModule  = Capacitors_SMD:c_elec_6.3x5.7;
+EndCmp
+
+BeginCmp
+TimeStamp = /54B98B59;
+Reference = C3;
+ValeurCmp = C;
+IdModule  = Capacitors_SMD:C_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54B98B5F;
+Reference = C4;
+ValeurCmp = C;
+IdModule  = Capacitors_SMD:C_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54B98B65;
+Reference = C5;
+ValeurCmp = C;
+IdModule  = Capacitors_SMD:C_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54B98B6B;
+Reference = C6;
+ValeurCmp = C;
+IdModule  = Capacitors_SMD:C_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54B98D75;
+Reference = C7;
+ValeurCmp = CP2;
+IdModule  = Capacitors_SMD:c_elec_6.3x5.7;
+EndCmp
+
+BeginCmp
+TimeStamp = /54B981C4;
+Reference = C8;
+ValeurCmp = C;
+IdModule  = Capacitors_SMD:C_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54B98227;
+Reference = C9;
+ValeurCmp = C;
+IdModule  = Capacitors_SMD:C_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54B98279;
+Reference = C10;
+ValeurCmp = C;
+IdModule  = Capacitors_SMD:C_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54B982B1;
+Reference = C11;
+ValeurCmp = C;
+IdModule  = Capacitors_SMD:C_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54BE9143;
+Reference = CON1;
+ValeurCmp = USB-MICRO-B;
+IdModule  = Connect:USB_Micro-B;
+EndCmp
+
+BeginCmp
+TimeStamp = /54AA5842;
 Reference = J1;
-ValeurCmp = CONN_2X2;
-IdModule  = PIN_ARRAY_2X2;
+ValeurCmp = CONN_02X02;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x02;
+EndCmp
+
+BeginCmp
+TimeStamp = /54AE7051;
+Reference = J5vSelect1;
+ValeurCmp = CONN_01X03;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x03;
+EndCmp
+
+BeginCmp
+TimeStamp = /54B95109;
+Reference = J_ADC_REF1;
+ValeurCmp = CONN_01X02;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x02;
+EndCmp
+
+BeginCmp
+TimeStamp = /54B99ABE;
+Reference = P0+1;
+ValeurCmp = CONN_01X08;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x08;
+EndCmp
+
+BeginCmp
+TimeStamp = /54B99AC4;
+Reference = P0-1;
+ValeurCmp = CONN_01X08;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x08;
+EndCmp
+
+BeginCmp
+TimeStamp = /54B9A94A;
+Reference = P0S1;
+ValeurCmp = CONN_01X08;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x08;
 EndCmp
 
 BeginCmp
 TimeStamp = /5350D632;
 Reference = P1;
 ValeurCmp = BEAGLEBONE_BLACK;
-IdModule  = BEAGLEBONE_BLACK;
+IdModule  = BeagleBoneBlack Cape:BEAGLEBONE_BLACK;
+EndCmp
+
+BeginCmp
+TimeStamp = /54B9A714;
+Reference = P1+1;
+ValeurCmp = CONN_01X08;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x08;
+EndCmp
+
+BeginCmp
+TimeStamp = /54B9A71A;
+Reference = P1-1;
+ValeurCmp = CONN_01X08;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x08;
+EndCmp
+
+BeginCmp
+TimeStamp = /54B9A727;
+Reference = P1S1;
+ValeurCmp = CONN_01X08;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x08;
+EndCmp
+
+BeginCmp
+TimeStamp = /54B9AF58;
+Reference = P2+1;
+ValeurCmp = CONN_01X08;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x08;
+EndCmp
+
+BeginCmp
+TimeStamp = /54B9AF52;
+Reference = P2-1;
+ValeurCmp = CONN_01X08;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x08;
+EndCmp
+
+BeginCmp
+TimeStamp = /54B9AF65;
+Reference = P2S1;
+ValeurCmp = CONN_01X08;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x08;
+EndCmp
+
+BeginCmp
+TimeStamp = /54BA0712;
+Reference = P8;
+ValeurCmp = CONN_01X08;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x08;
+EndCmp
+
+BeginCmp
+TimeStamp = /54B99C36;
+Reference = PIO1;
+ValeurCmp = CONN_01X08;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x08;
+EndCmp
+
+BeginCmp
+TimeStamp = /54BECB07;
+Reference = PIO_3V3;
+ValeurCmp = CONN_01X08;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x08;
+EndCmp
+
+BeginCmp
+TimeStamp = /54BEC8E6;
+Reference = PIO_5V1;
+ValeurCmp = CONN_01X08;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x08;
+EndCmp
+
+BeginCmp
+TimeStamp = /54BEC081;
+Reference = PIO_GND1;
+ValeurCmp = CONN_01X08;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x08;
+EndCmp
+
+BeginCmp
+TimeStamp = /54B9523E;
+Reference = P_AD+1;
+ValeurCmp = CONN_01X08;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x08;
+EndCmp
+
+BeginCmp
+TimeStamp = /54B953E8;
+Reference = P_AD-1;
+ValeurCmp = CONN_01X08;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x08;
+EndCmp
+
+BeginCmp
+TimeStamp = /54B9542E;
+Reference = P_AD1;
+ValeurCmp = CONN_01X08;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x08;
+EndCmp
+
+BeginCmp
+TimeStamp = /54BEEC29;
+Reference = P_PWR1;
+ValeurCmp = CONN_01X02;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x02;
 EndCmp
 
 BeginCmp
 TimeStamp = /534A2A2E;
 Reference = R1;
 ValeurCmp = 4.7k;
-IdModule  = SM0805;
+IdModule  = Resistors_SMD:R_0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /534A2A28;
 Reference = R2;
 ValeurCmp = 4.7k;
-IdModule  = SM0805;
+IdModule  = Resistors_SMD:R_0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /534A2A1B;
 Reference = R3;
 ValeurCmp = 4.7k;
-IdModule  = SM0805;
+IdModule  = Resistors_SMD:R_0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /534A2A34;
 Reference = R4;
 ValeurCmp = 1.5k;
-IdModule  = SM0805;
+IdModule  = Resistors_SMD:R_0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /534A2A3A;
 Reference = R5;
 ValeurCmp = 1.5k;
-IdModule  = SM0805;
+IdModule  = Resistors_SMD:R_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54B8C88C;
+Reference = UADC1;
+ValeurCmp = ADS7828;
+IdModule  = Housings_SSOP:TSSOP-16_4.4x5mm_Pitch0.65mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /54B7840B;
+Reference = UP0;
+ValeurCmp = TXS0108E;
+IdModule  = Housings_SSOP:TSSOP-20_4.4x6.5mm_Pitch0.65mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /54B78486;
+Reference = UP1;
+ValeurCmp = TXS0108E;
+IdModule  = Housings_SSOP:TSSOP-20_4.4x6.5mm_Pitch0.65mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /54B784F7;
+Reference = UP2;
+ValeurCmp = TXS0108E;
+IdModule  = Housings_SSOP:TSSOP-20_4.4x6.5mm_Pitch0.65mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /54B7ACC3;
+Reference = UPIO1;
+ValeurCmp = TXS0108E;
+IdModule  = Housings_SSOP:TSSOP-20_4.4x6.5mm_Pitch0.65mm;
 EndCmp
 
 BeginCmp
 TimeStamp = /534A29B4;
-Reference = U1;
+Reference = U_EEPROM1;
 ValeurCmp = 24C16;
-IdModule  = SO8E;
+IdModule  = SMD_Packages:SOIC-8-W;
+EndCmp
+
+BeginCmp
+TimeStamp = /54AE229C;
+Reference = U_IMU1;
+ValeurCmp = BMX055-Breakout;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x10;
 EndCmp
 
 EndListe

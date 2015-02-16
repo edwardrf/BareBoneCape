@@ -31,3 +31,15 @@ This board also has a connection designed for a proprietary 9 axis board using B
 |	P8_13	|	P8_13				|		|
 |	P9_42	|	P9_42				|		|
 |	P9_28	|	P9_28				|		|
+
+* Buffer #2 on the middle
+|   Name    |   BeagleBone Pin ID   | GPIO  	|
+|-----------|-----------------------|-----------|
+|	D32		|	P8_25				|GPIO1_0	|
+|	D33		|	P8_24				|GPIO1_1	|
+|	D34		|	P8_5				|GPIO1_2	|
+|	D35		|	P8_6				|GPIO1_3	|
+|	D36		|	P8_23				|GPIO1_4	|
+|	D37		|	P8_22				|GPIO1_5	|
+|	D38		|	P8_3				|GPIO1_6	|
+|	D39		|	P8_4				|GPIO1_7	|

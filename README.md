@@ -6,6 +6,9 @@ This board also has a connection designed for a proprietary 9 axis board using B
 ![Simple Cape](beaglebone-cape-front.png)
 
 ## Pin Mapping
+
+* Buffer #0  on the right top
+
 |   Name    |   BeagleBone Pin ID   | GPIO  	|
 |-----------|-----------------------|-----------|
 |	D70		|	P8_45				|GPIO2_6	|
@@ -16,3 +19,15 @@ This board also has a connection designed for a proprietary 9 axis board using B
 |	D75		|	P8_42				|GPIO2_11	|
 |	D76		|	P8_39				|GPIO2_12	|
 |	D77		|	P8_40				|GPIO2_13	|
+
+* Buffer #1 on the left
+|   Name    |   BeagleBone Pin ID   | GPIO  	|
+|-----------|-----------------------|-----------|
+|	P9_31	|	P9_31				|		|
+|	P9_29	|	P9_29				|		|
+|	P9_14	|	P9_14				|		|
+|	P9_16	|	P9_16				|		|
+|	P9_19	|	P9_19				|		|
+|	P8_13	|	P8_13				|		|
+|	P9_42	|	P9_42				|		|
+|	P9_28	|	P9_28				|		|

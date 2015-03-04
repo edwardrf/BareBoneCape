@@ -34,7 +34,7 @@ LIBS:txb0108
 LIBS:mcp3008
 LIBS:bmx055-breakout
 LIBS:ads7828
-LIBS:beaglebone-cape-cache
+LIBS:txs0108e
 EELAYER 25 0
 EELAYER END
 $Descr A3 16535 11693

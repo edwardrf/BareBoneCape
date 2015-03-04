@@ -1,4 +1,4 @@
-update=Sat 17 Jan 2015 03:26:12 PM CST
+update=Sat 28 Feb 2015 04:25:33 PM CST
 version=1
 last_client=kicad
 [general]
@@ -68,3 +68,6 @@ LibName33=lib/txb0108
 LibName34=lib/mcp3008
 LibName35=lib/bmx055-breakout
 LibName36=lib/ads7828
+LibName37=lib/pca9685pw
+LibName38=lib/bmp180
+LibName39=lib/bmx055

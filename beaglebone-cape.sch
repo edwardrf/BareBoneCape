@@ -34,6 +34,9 @@ LIBS:txb0108
 LIBS:mcp3008
 LIBS:bmx055-breakout
 LIBS:ads7828
+LIBS:pca9685pw
+LIBS:bmp180
+LIBS:bmx055
 LIBS:beaglebone-cape-cache
 EELAYER 25 0
 EELAYER END
@@ -428,10 +431,6 @@ Text Label 15500 9500 2    60   ~ 0
 SHLD_5V
 Text Label 15500 9600 2    60   ~ 0
 SYS_5V
-Text Label 2500 850  0    60   ~ 0
-SHLD_5V
-Text Label 2500 2650 0    60   ~ 0
-SHLD_5V
 Text Label 2200 850  2    60   ~ 0
 DC_3.3V
 Text Label 2200 2650 2    60   ~ 0
@@ -466,8 +465,6 @@ Text Label 1750 2950 2    60   ~ 0
 DC_3.3V
 Text Label 6400 2650 2    60   ~ 0
 DC_3.3V
-Text Label 6700 2650 0    60   ~ 0
-SHLD_5V
 Text Label 1750 1400 2    60   ~ 0
 GPIO2_6
 Text Label 1750 1500 2    60   ~ 0
@@ -486,24 +483,8 @@ Text Label 1750 2100 2    60   ~ 0
 GPIO2_13
 Text Label 1750 1150 2    60   ~ 0
 DC_3.3V
-Text Label 5950 3200 2    60   ~ 0
-GPIO1_0
 Text Label 5950 2950 2    60   ~ 0
 DC_3.3V
-Text Label 5950 3300 2    60   ~ 0
-GPIO1_1
-Text Label 5950 3400 2    60   ~ 0
-GPIO1_2
-Text Label 5950 3500 2    60   ~ 0
-GPIO1_3
-Text Label 5950 3600 2    60   ~ 0
-GPIO1_4
-Text Label 5950 3700 2    60   ~ 0
-GPIO1_5
-Text Label 5950 3800 2    60   ~ 0
-GPIO1_6
-Text Label 5950 3900 2    60   ~ 0
-GPIO1_7
 $Comp
 L TXS0108E UP0
 U 1 1 54B7840B
@@ -550,16 +531,10 @@ F 3 "" H 6550 1450 60  0000 C CNN
 $EndComp
 Text Label 6400 850  2    60   ~ 0
 DC_3.3V
-Text Label 6700 850  0    60   ~ 0
-SHLD_5V
 Text Label 5950 1150 2    60   ~ 0
 DC_3.3V
 Text Label 6550 2400 2    60   ~ 0
 GND
-Text Label 5950 1400 2    60   ~ 0
-I2C2_SCL
-Text Label 5950 1500 2    60   ~ 0
-I2C2_SDA
 Text Label 10950 1450 2    60   ~ 0
 SPI0_CS0
 Text Label 13150 1450 0    60   ~ 0
@@ -568,17 +543,9 @@ Text Label 10950 1650 2    60   ~ 0
 SPI0_D0
 Text Label 13150 1650 0    60   ~ 0
 SPI0_SCLK
-Text Label 5950 1600 2    60   ~ 0
-SPI0_CS0
-Text Label 5950 1800 2    60   ~ 0
-SPI0_D1
-Text Label 5950 1700 2    60   ~ 0
-SPI0_D0
-Text Label 5950 1900 2    60   ~ 0
-SPI0_SCLK
-Text Label 5950 2100 2    60   ~ 0
+Text Label 5950 1400 2    60   ~ 0
 UART1_RXD
-Text Label 5950 2000 2    60   ~ 0
+Text Label 5950 1500 2    60   ~ 0
 UART1_TXD
 $Comp
 L ADS7828 UADC1
@@ -593,22 +560,6 @@ F 3 "" H 14650 5250 60  0000 C CNN
 $EndComp
 Text Label 15250 4750 0    60   ~ 0
 SHLD_5V
-Text Label 7150 1400 0    60   ~ 0
-P_I2C2_SCL
-Text Label 7150 1500 0    60   ~ 0
-P_I2C2_SDA
-Text Label 7150 1600 0    60   ~ 0
-P_SPI0_CS0
-Text Label 7150 1700 0    60   ~ 0
-P_SPI0_D0
-Text Label 7150 1800 0    60   ~ 0
-P_SPI0_D1
-Text Label 7150 1900 0    60   ~ 0
-P_SPI0_SCLK
-Text Label 7150 2000 0    60   ~ 0
-P_UART1_TXD
-Text Label 7150 2100 0    60   ~ 0
-P_UART1_RXD
 Text Label 2950 1400 0    60   ~ 0
 P_GPIO_70
 Text Label 2950 1500 0    60   ~ 0
@@ -710,22 +661,6 @@ Text Label 2950 3800 0    60   ~ 0
 P_PWM_P9_42
 Text Label 2950 3900 0    60   ~ 0
 P_PWM_P9_28
-Text Label 7150 3200 0    60   ~ 0
-P_GPIO_32
-Text Label 7150 3300 0    60   ~ 0
-P_GPIO_33
-Text Label 7150 3400 0    60   ~ 0
-P_GPIO_34
-Text Label 7150 3500 0    60   ~ 0
-P_GPIO_35
-Text Label 7150 3600 0    60   ~ 0
-P_GPIO_36
-Text Label 7150 3700 0    60   ~ 0
-P_GPIO_37
-Text Label 7150 3800 0    60   ~ 0
-P_GPIO_38
-Text Label 7150 3900 0    60   ~ 0
-P_GPIO_39
 $Comp
 L C C8
 U 1 1 54B981C4
@@ -897,17 +832,6 @@ F 3 "" H 4550 2300 60  0000 C CNN
 $EndComp
 Text Label 4100 1200 0    60   ~ 0
 SHLD_5V
-$Comp
-L CONN_01X08 PIO1
-U 1 1 54B99C36
-P 8050 1750
-F 0 "PIO1" H 8050 2200 50  0000 C CNN
-F 1 "CONN_01X08" V 8150 1750 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x08" H 8050 1750 60  0001 C CNN
-F 3 "" H 8050 1750 60  0000 C CNN
-	1    8050 1750
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	12850 8800 13150 8800
 Wire Wire Line
@@ -1089,22 +1013,6 @@ Connection ~ 4550 1900
 Connection ~ 4550 2000
 Connection ~ 4550 2100
 Connection ~ 4100 1400
-Wire Wire Line
-	7850 1400 7150 1400
-Wire Wire Line
-	7150 1500 7850 1500
-Wire Wire Line
-	7850 1600 7150 1600
-Wire Wire Line
-	7150 1700 7850 1700
-Wire Wire Line
-	7850 1800 7150 1800
-Wire Wire Line
-	7850 1900 7150 1900
-Wire Wire Line
-	7150 2000 7850 2000
-Wire Wire Line
-	7850 2100 7150 2100
 $Comp
 L CONN_01X08 P1+1
 U 1 1 54B9A714
@@ -1212,113 +1120,6 @@ Wire Wire Line
 	2950 2000 3650 2000
 Wire Wire Line
 	3650 2100 2950 2100
-$Comp
-L CONN_01X08 P2-1
-U 1 1 54B9AF52
-P 8900 3550
-F 0 "P2-1" H 8900 4000 50  0000 C CNN
-F 1 "CONN_01X08" V 9000 3550 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x08" H 8900 3550 60  0001 C CNN
-F 3 "" H 8900 3550 60  0000 C CNN
-	1    8900 3550
-	1    0    0    -1  
-$EndComp
-$Comp
-L CONN_01X08 P2+1
-U 1 1 54B9AF58
-P 8450 3550
-F 0 "P2+1" H 8450 4000 50  0000 C CNN
-F 1 "CONN_01X08" V 8550 3550 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x08" H 8450 3550 60  0001 C CNN
-F 3 "" H 8450 3550 60  0000 C CNN
-	1    8450 3550
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR08
-U 1 1 54B9AF5E
-P 8700 4100
-F 0 "#PWR08" H 8700 3850 60  0001 C CNN
-F 1 "GND" H 8700 3950 60  0000 C CNN
-F 2 "" H 8700 4100 60  0000 C CNN
-F 3 "" H 8700 4100 60  0000 C CNN
-	1    8700 4100
-	1    0    0    -1  
-$EndComp
-Text Label 8250 3000 0    60   ~ 0
-SHLD_5V
-$Comp
-L CONN_01X08 P2S1
-U 1 1 54B9AF65
-P 8050 3550
-F 0 "P2S1" H 8050 4000 50  0000 C CNN
-F 1 "CONN_01X08" V 8150 3550 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x08" H 8050 3550 60  0001 C CNN
-F 3 "" H 8050 3550 60  0000 C CNN
-	1    8050 3550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8700 3200 8700 4100
-Connection ~ 8700 3300
-Connection ~ 8700 3400
-Connection ~ 8700 3500
-Connection ~ 8700 3600
-Connection ~ 8700 3700
-Connection ~ 8700 3800
-Wire Wire Line
-	8250 3000 8250 3900
-Connection ~ 8250 3300
-Connection ~ 8250 3400
-Connection ~ 8250 3500
-Connection ~ 8250 3600
-Connection ~ 8250 3700
-Connection ~ 8250 3800
-Connection ~ 8250 3900
-Connection ~ 8700 3200
-Wire Wire Line
-	7850 3200 7150 3200
-Wire Wire Line
-	7150 3300 7850 3300
-Wire Wire Line
-	7850 3400 7150 3400
-Wire Wire Line
-	7150 3500 7850 3500
-Wire Wire Line
-	7850 3600 7150 3600
-Wire Wire Line
-	7850 3700 7150 3700
-Wire Wire Line
-	7150 3800 7850 3800
-Wire Wire Line
-	7850 3900 7150 3900
-$Comp
-L CONN_01X08 P8
-U 1 1 54BA0712
-P 5250 1750
-F 0 "P8" H 5250 2200 50  0000 C CNN
-F 1 "CONN_01X08" V 5350 1750 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x08" H 5250 1750 60  0001 C CNN
-F 3 "" H 5250 1750 60  0000 C CNN
-	1    5250 1750
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	5450 1400 5950 1400
-Wire Wire Line
-	5450 1500 5950 1500
-Wire Wire Line
-	5950 1600 5450 1600
-Wire Wire Line
-	5450 1700 5950 1700
-Wire Wire Line
-	5450 1800 5950 1800
-Wire Wire Line
-	5450 1900 5950 1900
-Wire Wire Line
-	5950 2000 5450 2000
-Wire Wire Line
-	5450 2100 5950 2100
 Text Label 11650 7650 0    60   ~ 0
 SHLD_5V
 Text Label 11650 7750 0    60   ~ 0
@@ -1376,87 +1177,6 @@ Connection ~ 10300 5250
 Wire Wire Line
 	10400 5050 10300 5050
 Connection ~ 10300 5150
-$Comp
-L CONN_01X08 PIO_GND1
-U 1 1 54BEC081
-P 8400 1750
-F 0 "PIO_GND1" H 8400 2200 50  0000 C CNN
-F 1 "CONN_01X08" V 8500 1750 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x08" H 8400 1750 60  0001 C CNN
-F 3 "" H 8400 1750 60  0000 C CNN
-	1    8400 1750
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR010
-U 1 1 54BEC087
-P 8200 2300
-F 0 "#PWR010" H 8200 2050 60  0001 C CNN
-F 1 "GND" H 8200 2150 60  0000 C CNN
-F 2 "" H 8200 2300 60  0000 C CNN
-F 3 "" H 8200 2300 60  0000 C CNN
-	1    8200 2300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8200 1400 8200 2300
-Connection ~ 8200 1500
-Connection ~ 8200 1600
-Connection ~ 8200 1700
-Connection ~ 8200 1800
-Connection ~ 8200 1900
-Connection ~ 8200 2000
-Connection ~ 8200 2100
-Connection ~ 8250 3200
-Connection ~ 8700 3900
-$Comp
-L CONN_01X08 PIO_5V1
-U 1 1 54BEC8E6
-P 8800 1750
-F 0 "PIO_5V1" H 8800 2200 50  0000 C CNN
-F 1 "CONN_01X08" V 8900 1750 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x08" H 8800 1750 60  0001 C CNN
-F 3 "" H 8800 1750 60  0000 C CNN
-	1    8800 1750
-	1    0    0    -1  
-$EndComp
-Text Label 8600 1200 0    60   ~ 0
-SHLD_5V
-Wire Wire Line
-	8600 1200 8600 2100
-Connection ~ 8600 1500
-Connection ~ 8600 1600
-Connection ~ 8600 1700
-Connection ~ 8600 1800
-Connection ~ 8600 1900
-Connection ~ 8600 2000
-Connection ~ 8600 2100
-Connection ~ 8600 1400
-$Comp
-L CONN_01X08 PIO_3V3
-U 1 1 54BECB07
-P 9150 1750
-F 0 "PIO_3V3" H 9150 2200 50  0000 C CNN
-F 1 "CONN_01X08" V 9250 1750 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x08" H 9150 1750 60  0001 C CNN
-F 3 "" H 9150 1750 60  0000 C CNN
-	1    9150 1750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8950 1400 8950 2300
-Wire Wire Line
-	8950 1500 8950 2100
-Connection ~ 8950 1500
-Connection ~ 8950 1600
-Connection ~ 8950 1700
-Connection ~ 8950 1800
-Connection ~ 8950 1900
-Connection ~ 8950 2000
-Connection ~ 8950 2100
-Connection ~ 8950 1400
-Text Label 8950 2300 2    60   ~ 0
-DC_3.3V
 Wire Wire Line
 	15200 7550 15100 7550
 Wire Wire Line
@@ -1473,4 +1193,134 @@ F 3 "" H 11450 7700 60  0000 C CNN
 	1    11450 7700
 	-1   0    0    -1  
 $EndComp
+$Comp
+L ATMEGA328P-A IC?
+U 1 1 54F19592
+P 2150 8050
+F 0 "IC?" H 1400 9300 40  0000 L BNN
+F 1 "ATMEGA328P-A" H 2550 6650 40  0000 L BNN
+F 2 "TQFP32" H 2150 8050 30  0000 C CIN
+F 3 "" H 2150 8050 60  0000 C CNN
+	1    2150 8050
+	1    0    0    -1  
+$EndComp
+$Comp
+L PCA9685PW U?
+U 1 1 54F1991B
+P 5450 7500
+F 0 "U?" H 5450 7450 60  0000 C CNN
+F 1 "PCA9685PW" H 5450 7550 60  0000 C CNN
+F 2 "" H 5450 7500 60  0000 C CNN
+F 3 "" H 5450 7500 60  0000 C CNN
+	1    5450 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L BMX055 U?
+U 1 1 54F19A94
+P 7850 7400
+F 0 "U?" H 7850 7350 60  0000 C CNN
+F 1 "BMX055" H 7850 7450 60  0000 C CNN
+F 2 "" H 7850 7400 60  0000 C CNN
+F 3 "" H 7850 7400 60  0000 C CNN
+	1    7850 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L BMP180 U?
+U 1 1 54F19AEF
+P 7850 9550
+F 0 "U?" H 7850 9500 60  0000 C CNN
+F 1 "BMP180" H 7850 9600 60  0000 C CNN
+F 2 "" H 7850 9550 60  0000 C CNN
+F 3 "" H 7850 9550 60  0000 C CNN
+	1    7850 9550
+	1    0    0    -1  
+$EndComp
+$Comp
+L RJ12 J?
+U 1 1 54F1A3F8
+P 5550 5400
+F 0 "J?" H 5750 5900 60  0000 C CNN
+F 1 "RJ12" H 5400 5900 60  0000 C CNN
+F 2 "" H 5550 5400 60  0000 C CNN
+F 3 "" H 5550 5400 60  0000 C CNN
+	1    5550 5400
+	1    0    0    -1  
+$EndComp
+Text Label 13150 2750 0    60   ~ 0
+UART3_TXD
+Wire Wire Line
+	13150 2750 13050 2750
+Wire Wire Line
+	13050 2750 13050 2650
+Connection ~ 13050 2650
+Text Label 5950 1600 2    60   ~ 0
+UART2_RXD
+Text Label 5950 1700 2    60   ~ 0
+UART2_TXD
+Text Label 5950 1800 2    60   ~ 0
+UART4_RXD
+Text Label 5950 2000 2    60   ~ 0
+UART5_RXD
+Text Label 5950 1900 2    60   ~ 0
+UART4_TXD
+Text Label 5950 2100 2    60   ~ 0
+UART5_TXD
+Text Label 7150 1400 0    60   ~ 0
+UART1_RX_5V
+Text Label 7150 1500 0    60   ~ 0
+UART1_TX_5V
+Text Label 7150 1600 0    60   ~ 0
+UART2_RX_5V
+Text Label 7150 1800 0    60   ~ 0
+UART4_RX_5V
+Text Label 7150 2000 0    60   ~ 0
+UART5_RX_5V
+Text Label 7150 1700 0    60   ~ 0
+UART2_TX_5V
+Text Label 7150 1900 0    60   ~ 0
+UART4_TX_5V
+Text Label 7150 2100 0    60   ~ 0
+UART5_TX_5V
+Text Label 6700 850  0    60   ~ 0
+SYS_5V
+Text Label 6700 2650 0    60   ~ 0
+SYS_5V
+Text Label 5950 3200 2    60   ~ 0
+I2C1_SCL
+Text Label 5950 3400 2    60   ~ 0
+I2C2_SCL
+Text Label 5950 3500 2    60   ~ 0
+I2C2_SDA
+Text Label 5950 3300 2    60   ~ 0
+I2C1_SDA
+Text Label 5950 3600 2    60   ~ 0
+SPI0_CS0
+Text Label 5950 3700 2    60   ~ 0
+SPI0_D0
+Text Label 5950 3800 2    60   ~ 0
+SPI0_D1
+Text Label 5950 3900 2    60   ~ 0
+SPI0_SCLK
+Text Label 7150 3200 0    60   ~ 0
+I2C1_SCL_5V
+Text Label 7150 3400 0    60   ~ 0
+I2C2_SCL_5V
+Text Label 7150 3500 0    60   ~ 0
+I2C2_SDA_5V
+Text Label 7150 3300 0    60   ~ 0
+I2C1_SDA_5V
+Text Label 7150 3600 0    60   ~ 0
+SPI0_CS0_5V
+Text Label 7150 3700 0    60   ~ 0
+SPI0_D0_5V
+Text Label 7150 3800 0    60   ~ 0
+SPI0_D1_5V
+Text Label 7150 3900 0    60   ~ 0
+SPI0_SCLK_5V
+Text Label 2500 850  0    60   ~ 0
+SYS_5V
+Text Label 2500 2650 0    60   ~ 0
+SYS_5V
 $EndSCHEMATC
